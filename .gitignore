@@ -1,0 +1,49 @@
+# GLOBAL
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+.idea
+.vscode
+*.bak
+
+# ENV FILES (SECRETS)
+.env
+.env.*
+!.env.example
+
+# LARAVEL (gateway-service)
+gateway-service/vendor/
+gateway-service/node_modules/
+gateway-service/storage/*.key*
+*gateway-service/storage/logs/*
+gateway-service/storage/framework/cache/*
+gateway-service/storage/framework/sessions/*
+gateway-service/storage/framework/views/*
+gateway-service/bootstrap/cache/*
+gateway-service/public/build
+gateway-service/public/hot
+gateway-service/.phpunit.result.cache
+
+# COMPOSER
+composer.phar
+
+# NPM / FRONTEND
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# GO (notification-service)
+notification-service/bin/
+notification-service/dist/
+notification-service/tmp/
+notification-service/*.exe*
+*notification-service/*.out
+notification-service/*.test
+
+# BUILD / COVERAGE
+coverage/
+coverage.out
