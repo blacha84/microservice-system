@@ -1,0 +1,9 @@
+services:
+  notification-service:
+    image: golang:1.22
+    working_dir: /notification-service
+    volumes:
+      - ../../notification-service:/notification-service
+    command: go run main.go
+    ports:
+      - "8081:8081"

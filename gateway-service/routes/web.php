@@ -6,6 +6,7 @@ use App\Http\Controllers\ActivationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\PasswordResetController;
 
 
 /*
@@ -38,6 +39,18 @@ Route::middleware('guest')->group(function () {
 
     Route::post('/login', [LoginController::class, 'login'])
         ->name('login');
+
+    Route::get('/forgot-password', [PasswordResetController::class, 'show'])
+        ->name('password.forgot');
+
+    Route::post('/forgot-password', [PasswordResetController::class, 'send'])
+        ->name('password.send');
+
+    Route::get('/reset-password', [PasswordResetController::class, 'showResetForm'])
+        ->name('password.reset');
+
+    Route::post('/reset-password', [PasswordResetController::class, 'reset'])
+        ->name('password.update');
 
 });
 

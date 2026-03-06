@@ -89,6 +89,16 @@ focus:ring-2 focus:ring-blue-500"
 
                 </button>
 
+                <p class="text-sm text-center mt-4">
+
+                    <a href="{{ route('password.forgot') }}"
+                       class="text-blue-600 hover:underline">
+
+                        Forgot password?
+
+                    </a>
+
+                </p>
 
                 <p class="text-sm text-gray-500 text-center">
 

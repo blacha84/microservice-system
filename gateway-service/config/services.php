@@ -40,4 +40,7 @@ return [
         'secret_key' => env('RECAPTCHA_SECRET_KEY'),
     ],
 
+    'notification_service' => [
+        'url' => env('NOTIFICATION_SERVICE_URL'),
+    ],
 ];
