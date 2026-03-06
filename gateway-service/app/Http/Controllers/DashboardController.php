@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 
 class DashboardController extends Controller
 {
-    /**
-     * @return Factory|\Illuminate\Contracts\View\View
-     */
-    public function show(): Factory|\Illuminate\Contracts\View\View
+    public function show(): View
     {
-        return view('dashboard');
+        return view('dashboard.index', [
+            'user' => auth()->user()
+        ]);
     }
 }

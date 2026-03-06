@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
 
 <nav class="bg-white shadow">
 
@@ -45,10 +45,10 @@
             @auth
 
                 <span class="text-gray-600 text-sm">
-                    Hello, <span class="font-semibold">{{ auth()->user()->name }}</span>
-                </span>
+Hello, <span class="font-semibold">{{ auth()->user()->name }}</span>
+</span>
 
-                <a href="/dashboard" class="hover:text-blue-600">
+                <a href="{{ route('dashboard') }}" class="hover:text-blue-600">
                     Dashboard
                 </a>
 
@@ -73,7 +73,7 @@
 </nav>
 
 
-<main>
+<main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full">
 
     @yield('content')
 
@@ -85,6 +85,8 @@
     Smart Parking System demo – Laravel + Go microservices
 
 </footer>
+
+@stack('scripts')
 
 </body>
 
